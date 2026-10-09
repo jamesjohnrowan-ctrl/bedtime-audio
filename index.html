@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#15263b">
+  <title>Bedtime with Dad</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header><span class="moon" aria-hidden="true">☾</span><p class="eyebrow">A little closer, wherever we are</p><h1>Bedtime with Dad</h1><p>Messages and songs, saved for sleepy evenings.</p></header>
+    <section class="player" aria-labelledby="now-title">
+      <p class="eyebrow">Now playing</p><h2 id="now-title">Choose a recording</h2>
+      <p id="description">Your recordings will appear below.</p>
+      <audio id="audio" controls preload="metadata" aria-label="Recording player"></audio>
+      <div class="player-actions"><button id="previous" disabled>Previous</button><button id="next" disabled>Next</button><label><input id="continuous" type="checkbox"> Play next automatically</label></div>
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+    <section aria-labelledby="library-title"><div class="library-heading"><h2 id="library-title">Your recordings</h2><span id="count"></span></div><div class="filters" role="group" aria-label="Filter recordings"><button data-filter="all" aria-pressed="true">All</button><button data-filter="message" aria-pressed="false">Messages</button><button data-filter="song" aria-pressed="false">Songs</button></div><div id="library"></div></section>
+    <footer>Made for a good night.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
