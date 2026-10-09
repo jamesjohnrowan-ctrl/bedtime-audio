@@ -3,6 +3,10 @@ const library = document.querySelector('#library');
 const status = document.querySelector('#status');
 const previous = document.querySelector('#previous');
 const next = document.querySelector('#next');
+const floatingPlayer = document.querySelector('.player');
+new ResizeObserver(() => {
+  document.documentElement.style.setProperty('--player-height', `${floatingPlayer.getBoundingClientRect().height}px`);
+}).observe(floatingPlayer);
 let tracks = [];
 let selected = -1;
 let filter = 'all';
