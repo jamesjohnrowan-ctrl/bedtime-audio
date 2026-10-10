@@ -1,1 +1,42 @@
-[{"title":"Edelweiss","type":"song","description":"","file":"edelweiss.m4a"},{"title":"Goodnight Buddy","type":"message","description":"","file":"goodnightlilbuddy.m4a"}]
+[
+  {
+    "title": "Edelweiss",
+    "type": "song",
+    "description": "",
+    "file": "edelweiss.m4a"
+  },
+  {
+    "title": "Goodnight Buddy",
+    "type": "message",
+    "description": "",
+    "file": "goodnightlilbuddy.m4a"
+  },
+  {
+    "title": "Little Blue Truck Good Night",
+    "type": "story",
+    "description": "",
+    "file": "stories/little-blue-truck-good-night/audio.m4a",
+    "thumbnail": "stories/little-blue-truck-good-night/cover.jpg"
+  },
+  {
+    "title": "Mustache Baby",
+    "type": "story",
+    "description": "",
+    "file": "stories/mustache-baby/audio.m4a",
+    "thumbnail": "stories/mustache-baby/cover.jpg"
+  },
+  {
+    "title": "Stanley's Fire Engine",
+    "type": "story",
+    "description": "",
+    "file": "stories/stanleys-fire-engine/audio.m4a",
+    "thumbnail": "stories/stanleys-fire-engine/cover.jpg"
+  },
+  {
+    "title": "Stanley's Garage",
+    "type": "story",
+    "description": "",
+    "file": "stories/stanleys-garage/audio.m4a",
+    "thumbnail": "stories/stanleys-garage/cover.jpg"
+  }
+]

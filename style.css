@@ -10,3 +10,6 @@ html{scroll-padding-bottom:calc(var(--player-height, 260px) + 32px)}
 
 #library{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:10px;align-items:stretch}.track{margin:0;min-width:0;padding:16px 12px;gap:8px}.track .details{min-width:0}.track strong{overflow-wrap:anywhere;font-size:16px}.track .icon{flex-shrink:0}.empty{grid-column:1/-1}@media(max-width:420px){.track{padding:14px 10px}.track .icon{display:none}.track strong{font-size:15px}}
 
+
+.stories-section{margin-top:30px}#stories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.story{display:block;padding:0;min-width:0;width:100%;overflow:hidden;border-radius:16px;background:#203249;align-self:start}.story img{display:block;width:100%;height:auto}.story[aria-current=true]{outline:3px solid #eacb8d;outline-offset:3px}@media(max-width:420px){#stories{gap:12px}}
+

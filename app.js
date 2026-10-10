@@ -1,5 +1,6 @@
 const audio = document.querySelector('#audio');
 const library = document.querySelector('#library');
+const stories = document.querySelector('#stories');
 const status = document.querySelector('#status');
 const previous = document.querySelector('#previous');
 const next = document.querySelector('#next');
@@ -9,11 +10,11 @@ new ResizeObserver(() => {
 }).observe(floatingPlayer);
 let tracks = [];
 let selected = -1;
-let filter = 'all';
 
 function render() {
   library.replaceChildren();
-  const visible = tracks.filter(track => filter === 'all' || track.type === filter);
+  stories.replaceChildren();
+  const visible = [...tracks.filter(track => track.type !== 'story'), ...tracks.filter(track => track.type === 'story')];
   document.querySelector('#count').textContent = `${tracks.length} recording${tracks.length === 1 ? '' : 's'}`;
   if (!visible.length) {
     const empty = document.createElement('p');
@@ -26,6 +27,19 @@ function render() {
     const button = document.createElement('button');
     button.className = 'track';
     button.setAttribute('aria-current', String(selected === index));
+    if (track.type === 'story') {
+      button.className = 'story';
+      button.setAttribute('aria-label', `Play ${track.title}`);
+      const cover = document.createElement('img');
+      cover.src = track.thumbnail;
+      cover.alt = track.title;
+      cover.loading = 'lazy';
+      cover.decoding = 'async';
+      button.append(cover);
+      button.addEventListener('click', () => select(index));
+      stories.append(button);
+      continue;
+    }
     const icon = document.createElement('span');
     icon.className = 'icon'; icon.textContent = track.type === 'song' ? '♫' : '◌'; icon.setAttribute('aria-hidden', 'true');
     const details = document.createElement('span'); details.className = 'details';
@@ -61,17 +75,12 @@ audio.addEventListener('ended', () => {
   }
   if (document.querySelector('#continuous').checked && selected < tracks.length - 1) select(selected + 1);
 });
-document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
-  filter = button.dataset.filter;
-  document.querySelectorAll('[data-filter]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-  render();
-}));
 async function load() {
   try {
     const response = await fetch('recordings.json', { cache: 'no-cache' });
     if (!response.ok) throw new Error('Library unavailable');
     const data = await response.json();
-    if (!Array.isArray(data) || data.some(track => typeof track.title !== 'string' || typeof track.file !== 'string' || !['message', 'song'].includes(track.type))) throw new Error('Invalid library');
+    if (!Array.isArray(data) || data.some(track => typeof track.title !== 'string' || typeof track.file !== 'string' || !['message', 'song', 'story'].includes(track.type) || (track.type === 'story' && typeof track.thumbnail !== 'string'))) throw new Error('Invalid library');
     tracks = data;
     render();
   } catch {
