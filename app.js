@@ -54,6 +54,11 @@ previous.addEventListener('click', () => select(selected - 1));
 next.addEventListener('click', () => select(selected + 1));
 audio.addEventListener('error', () => { status.textContent = 'This recording could not load. Check your connection or try another recording.'; });
 audio.addEventListener('ended', () => {
+  const followUp = tracks.findIndex(track => track.file.split('/').pop() === 'goodnightlilbuddy.m4a');
+  if (tracks[selected]?.file.split('/').pop() === 'edelweiss.m4a' && followUp !== -1) {
+    select(followUp);
+    return;
+  }
   if (document.querySelector('#continuous').checked && selected < tracks.length - 1) select(selected + 1);
 });
 document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
