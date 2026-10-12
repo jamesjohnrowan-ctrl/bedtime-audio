@@ -38,5 +38,68 @@
     "description": "",
     "file": "stories/stanleys-garage/audio.m4a",
     "thumbnail": "stories/stanleys-garage/cover.jpg"
+  },
+  {
+    "title": "Little Blue Truck and Racer Red",
+    "type": "story",
+    "description": "",
+    "file": "stories/little-blue-truck-and-racer-red/audio.m4a",
+    "thumbnail": "stories/little-blue-truck-and-racer-red/cover.jpg"
+  },
+  {
+    "title": "Little Blue Truck Feeling Happy",
+    "type": "story",
+    "description": "",
+    "file": "stories/little-blue-truck-feeling-happy/audio.m4a",
+    "thumbnail": "stories/little-blue-truck-feeling-happy/cover.jpg"
+  },
+  {
+    "title": "Little Blue Truck Leads the Way",
+    "type": "story",
+    "description": "",
+    "file": "stories/little-blue-truck-leads-the-way/audio.m4a",
+    "thumbnail": "stories/little-blue-truck-leads-the-way/cover.jpg"
+  },
+  {
+    "title": "Little Blue Truck Lost and Found",
+    "type": "story",
+    "description": "",
+    "file": "stories/little-blue-truck-lost-and-found/audio.m4a",
+    "thumbnail": "stories/little-blue-truck-lost-and-found/cover.jpg"
+  },
+  {
+    "title": "Little Blue Truck Time for School",
+    "type": "story",
+    "description": "",
+    "file": "stories/little-blue-truck-time-for-school/audio.m4a",
+    "thumbnail": "stories/little-blue-truck-time-for-school/cover.jpg"
+  },
+  {
+    "title": "Never Touch the Dinosaurs",
+    "type": "story",
+    "description": "",
+    "file": "stories/never-touch-the-dinosaurs/audio.m4a",
+    "thumbnail": "stories/never-touch-the-dinosaurs/cover.jpg"
+  },
+  {
+    "title": "Stanley's Store",
+    "type": "story",
+    "description": "",
+    "file": "stories/stanleys-store/audio.m4a",
+    "thumbnail": "stories/stanleys-store/cover.jpg"
+  },
+  {
+    "title": "Stanley's Train",
+    "type": "story",
+    "description": "",
+    "file": "stories/stanleys-train/audio.m4a",
+    "thumbnail": "stories/stanleys-train/cover.jpg"
+  },
+  {
+    "title": "Stanley the Builder",
+    "type": "story",
+    "description": "",
+    "file": "stories/stanley-the-builder/audio.m4a",
+    "thumbnail": "stories/stanley-the-builder/cover.jpg"
   }
 ]
